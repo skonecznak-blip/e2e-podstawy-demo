@@ -9,4 +9,8 @@ test('produktu niedostępnego nie da się dodać do koszyka', async ({ page }) =
 
   await expect(wiersz).toBeVisible();
   await expect(wiersz.getByText('Niedostępny')).toBeVisible();
+
+  // Właściwe sprawdzenie z nazwy testu: przycisk „Dodaj do koszyka” jest wyłączony,
+  // więc klient nie może go kliknąć i dodać produktu.
+  await expect(wiersz.getByRole('button', { name: 'Dodaj do koszyka' })).toBeDisabled();
 });

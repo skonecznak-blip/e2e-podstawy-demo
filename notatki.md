@@ -1,1 +1,1 @@
-Środowisko działa, npm test bez błędów.
+Środowisko działa, npm test bez błędów.   
