@@ -18,24 +18,38 @@ test.describe('Panel admina: zamówienia', () => {
     await page.goto('/admin/zamowienia');
   });
 
-  test.fixme('anulowanie ZAM-1003 zmienia jego status na „Anulowane”', async ({ page }) => {
-    // TODO 1: lokator wiersza z numerem ZAM-1003:
-    //   page.getByRole('row').filter({ hasText: 'ZAM-1003' })
-    // TODO 2: sprawdź, że wiersz ma status „Nowe” (stan przed akcją)
-    // TODO 3: kliknij „Anuluj” w tym wierszu (szukaj przycisku wewnątrz wiersza)
-    // TODO 4: sprawdź komunikat „Anulowano zamówienie ZAM-1003”
-    // TODO 5: sprawdź, że wiersz ma status „Anulowane” i nie ma już przycisku „Anuluj”
+  test('anulowanie ZAM-1003 zmienia jego status na „Anulowane”', async ({ page }) => {
+    // Wiersz szukamy po treści, bo jego id zmienia się przy każdym odświeżeniu
+    const wiersz = page.getByRole('row').filter({ hasText: 'ZAM-1003' });
+
+    // Stan przed akcją: zamówienie jest nowe
+    await expect(wiersz).toContainText('Nowe');
+
+    // Klikamy „Anuluj” tylko w tym wierszu (na stronie jest wiele takich przycisków)
+    await wiersz.getByRole('button', { name: 'Anuluj' }).click();
+
+    await expect(page.getByText('Anulowano zamówienie ZAM-1003')).toBeVisible();
+    await expect(wiersz).toContainText('Anulowane');
+    await expect(wiersz.getByRole('button', { name: 'Anuluj' })).toHaveCount(0);
   });
 
-  test.fixme('wyszukanie „Mydło” zostawia jedno zamówienie, ZAM-1006', async ({ page }) => {
-    // TODO 1: wpisz „Mydło” w pole „Szukaj zamówienia” i kliknij „Szukaj”
-    // TODO 2: sprawdź napis „Znaleziono: 1”
-    // TODO 3: policz wiersze z danymi (wiersz nagłówka nie zawiera „ZAM-”)
-    //   i sprawdź, że jedyny wiersz to ZAM-1006
+  test('wyszukanie „Mydło” zostawia jedno zamówienie, ZAM-1006', async ({ page }) => {
+    await page.getByLabel('Szukaj zamówienia').fill('Mydło');
+    await page.getByRole('button', { name: 'Szukaj' }).click();
+
+    await expect(page.getByText('Znaleziono: 1')).toBeVisible();
+
+    // Wiersze z danymi zawierają „ZAM-”, wiersz nagłówka nie
+    const wierszeZDanymi = page.getByRole('row').filter({ hasText: 'ZAM-' });
+    await expect(wierszeZDanymi).toHaveCount(1);
+    await expect(wierszeZDanymi).toContainText('ZAM-1006');
   });
 
-  test.fixme('wyszukanie nieistniejącego numeru daje pustą tabelę', async ({ page }) => {
-    // TODO 1: wyszukaj „ZAM-9999”
-    // TODO 2: sprawdź napis „Znaleziono: 0” i brak wierszy z danymi
+  test('wyszukanie nieistniejącego numeru daje pustą tabelę', async ({ page }) => {
+    await page.getByLabel('Szukaj zamówienia').fill('ZAM-9999');
+    await page.getByRole('button', { name: 'Szukaj' }).click();
+
+    await expect(page.getByText('Znaleziono: 0')).toBeVisible();
+    await expect(page.getByRole('row').filter({ hasText: 'ZAM-' })).toHaveCount(0);
   });
 });
