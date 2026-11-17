@@ -88,8 +88,13 @@ test('Biuro Mikołaja: zamówienie na firmę, status „Wysłane” i faktura z 
   const plik = await pobieranie;
   expect(plik.suggestedFilename()).toBe(`faktura-${numer}.html`);
 
-  // Faktura to strona HTML: wczytujemy ją do przeglądarki i sprawdzamy zwykłymi lokatorami.
-  const tresc = fs.readFileSync(await plik.path(), 'utf8');
+  // Zapisz fakturę w folderze wyników testu (test-results/…), żeby została po teście.
+  const sciezka = test.info().outputPath(plik.suggestedFilename());
+  await plik.saveAs(sciezka);
+  expect(fs.existsSync(sciezka)).toBe(true);
+
+  // Faktura to strona HTML: wczytujemy zapisany plik do przeglądarki i sprawdzamy zwykłymi lokatorami.
+  const tresc = fs.readFileSync(sciezka, 'utf8');
   await page.setContent(tresc);
   await expect(page.getByText('NIP nabywcy: 2412241228')).toBeVisible();
   await expect(page.getByText('Biuro Mikołaja')).toBeVisible();
