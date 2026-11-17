@@ -11,11 +11,21 @@ test('zapis ustawień pokazuje komunikat', async ({ page }) => {
   await expect(page.getByText('Zalogowano jako admin')).toBeVisible();
 
   await page.goto('/admin/ustawienia');
+  const poleKonserwacji = page.getByLabel('Tryb konserwacji sklepu');
+  const stanKonserwacji = page.getByTestId('maintenance-state');
+
+  // Stan przed zapisem: tryb konserwacji wyłączony, pole niezaznaczone.
+  await expect(poleKonserwacji).not.toBeChecked();
+  await expect(stanKonserwacji).toHaveText('Stan: wyłączony');
+
+  // Zapisujemy bez zaznaczania niczego.
   await page.getByRole('button', { name: 'Zapisz' }).click();
-  await expect(page.getByTestId('maintenance-state')).toHaveText('Stan: wyłączony');
 
-  // Dajemy aplikacji chwilę na zapis ustawień
-  await page.waitForTimeout(6000);
-
+  // Komunikat sprawdzamy od razu po kliknięciu, bo znika po kilku sekundach.
+  // Asercja sama czeka, aż się pojawi, więc pauza nie jest potrzebna.
   await expect(page.getByText('Zapisano ustawienia')).toBeVisible();
+
+  // Stan po zapisie się nie zmienił.
+  await expect(poleKonserwacji).not.toBeChecked();
+  await expect(stanKonserwacji).toHaveText('Stan: wyłączony');
 });

@@ -11,7 +11,8 @@ test('klient widzi swoje zamówienia', async ({ page }) => {
 
   await page.goto('/zamowienia');
 
-  // Policz wiersze tabeli zamówień
-  const liczbaWierszy = await page.getByTestId('order-row').count();
-  expect(liczbaWierszy).toBeGreaterThan(0);
+  // Lista doładowuje się z API po chwili. Asercja web-first sama czeka,
+  // aż pojawi się pierwszy wiersz zamówienia (count() nie czeka).
+  // getByTestId, bo getByRole('row') złapałby też wiersz nagłówka tabeli.
+  await expect(page.getByTestId('order-row').first()).toBeVisible();
 });
