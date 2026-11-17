@@ -15,6 +15,16 @@ Testy czytają i oceniają testerzy, którzy dopiero uczą się kodu. Pisz prost
 - Komentarze po polsku, krótkie: co robi krok i dlaczego, gdy to nieoczywiste.
 - Testy API przez fixture `request`; sprawdzaj status i treść odpowiedzi.
 
+## Review i dane testowe
+- Test, który zmienia dane, sprząta po sobie w `afterEach` albo tworzy własne dane, żeby przechodził przy drugim uruchomieniu i niezależnie od innych testów.
+- Sprawdzaj efekt biznesowy (status zamówienia, zapisane dane, treść komunikatu), a nie kolor, klasę CSS ani układ strony.
+- Oczekiwane wartości (liczby, ceny, teksty) bierz z wymagania albo przypadku testowego i nigdy nie przepisuj ich ze strony.
+- Napisz asercję dla każdego zdania wymagania tak, żeby padła, gdy akcja się nie uda, i nie sprawdzaj elementów widocznych już przed akcją.
+- Porównuj teksty dokładnie przez `toHaveText`, a w asercjach z `not` i `toBeHidden()` używaj tylko tekstów, które aplikacja naprawdę pokazuje.
+- Nie ukrywaj niejednoznacznego lokatora za `.first()`, `.nth()` ani `.last()`, tylko zawęź go do właściwego wiersza albo sekcji.
+- Loguj się kontem zgodnym z wymaganiem: `user` dla wymagań klienta, `admin` dla wymagań administratora.
+- Nie pisz „jestem pewien”, tylko pokaż wynik dwóch uruchomień testu i jednego uruchomienia, w którym test padł po zmianie oczekiwanej wartości.
+
 ## Uruchamianie
 - `npx playwright test` (wszystkie), `npx playwright test <plik>` (jeden plik), `npm run test:smoke`.
 - Playwright sam uruchamia aplikację (`webServer` w `playwright.config.ts`).
