@@ -12,7 +12,8 @@ test('sortowanie „Cena: od najwyższej” pokazuje na początku produkt za 39,
   await page.getByRole('button', { name: 'Filtruj' }).click();
   await expect(page).toHaveURL(/sort=cena-malejaco/);
 
-  // Pierwsza w tabeli ma być „Kalendarz adwentowy 2026” (39,99 zł), a nie np. „Żel pod prysznic” (9,99 zł).
-  const nazwy = await page.getByTestId('product-name').allTextContents();
-  expect(nazwy[0]).toBe('Kalendarz adwentowy 2026');
+  // Pierwszy wiersz ma mieć najwyższą cenę 39,99 zł, a nie np. 9,99 zł („Żel pod prysznic”).
+  // Sprawdzamy cenę, a nie nazwę: kalendarz i serum mają tę samą cenę, więc ich kolejność może się zmienić.
+  const wiersze = await page.getByTestId('product-row').allInnerTexts();
+  expect(wiersze[0]).toContain('39,99 zł');
 });
