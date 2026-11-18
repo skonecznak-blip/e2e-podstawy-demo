@@ -1,0 +1,61 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "namssor" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f4e8]:
+        - link "Produkty" [ref=f4e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f4e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f4e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f4e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f4e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f4e14]:
+        - generic [ref=f4e15]: Zalogowano jako user (user)
+        - button "Wyloguj" [ref=f4e17] [cursor=pointer]
+  - main [ref=f4e18]:
+    - heading "Koszyk" [level=1] [ref=f4e19]
+    - paragraph [ref=f4e20]: "Pozycji: 1, razem: 18,99 zł"
+    - table [ref=f4e21]:
+      - rowgroup [ref=f4e22]:
+        - row [ref=f4e23]:
+          - columnheader "Produkt" [ref=f4e24]
+          - columnheader "Cena" [ref=f4e25]
+          - columnheader "Ilość" [ref=f4e26]
+          - columnheader "Wartość" [ref=f4e27]
+          - columnheader [ref=f4e28]
+      - rowgroup [ref=f4e29]:
+        - row [ref=f4e30]:
+          - cell "Balsam do ciała" [ref=f4e31]
+          - cell "18,99 zł" [ref=f4e32]
+          - cell "1" [ref=f4e33]
+          - cell "18,99 zł" [ref=f4e34]
+          - cell [ref=f4e35]:
+            - 'button "Usuń: Balsam do ciała" [ref=f4e37] [cursor=pointer]': Usuń
+    - generic [ref=f4e38]:
+      - generic [ref=f4e39]:
+        - text: Kod rabatowy
+        - textbox "Kod rabatowy" [ref=f4e40]
+      - button "Zastosuj kod" [ref=f4e41] [cursor=pointer]
+    - generic [ref=f4e42]:
+      - paragraph [ref=f4e43]:
+        - generic [ref=f4e44]:
+          - checkbox "Faktura na firmę" [ref=f4e45]
+          - text: Faktura na firmę
+      - button "Złóż zamówienie (płatność przy odbiorze)" [ref=f4e46] [cursor=pointer]
+      - link "Zapłać kartą online" [ref=f4e47] [cursor=pointer]:
+        - /url: /koszyk/platnosc
+  - contentinfo [ref=f4e48]:
+    - generic [ref=f4e49]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f4e50]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f4e51] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f4e52] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f4e53] [cursor=pointer]:
+      - /url: /api/docs

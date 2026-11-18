@@ -1,0 +1,39 @@
+- generic [active] [ref=f16e1]:
+  - banner [ref=f16e2]:
+    - generic [ref=f16e3]:
+      - link "namssor" [ref=f16e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f16e8]:
+        - link "Produkty" [ref=f16e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f16e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f16e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f16e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f16e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f16e14]:
+        - generic [ref=f16e15]: Zalogowano jako user (user)
+        - button "Wyloguj" [ref=f16e17] [cursor=pointer]
+  - main [ref=f16e18]:
+    - heading "Logowanie" [level=1] [ref=f16e19]
+    - generic [ref=f16e20]:
+      - paragraph [ref=f16e21]:
+        - generic [ref=f16e22]: Login
+        - textbox "Login" [ref=f16e23]
+      - paragraph [ref=f16e24]:
+        - generic [ref=f16e25]: Hasło
+        - textbox "Hasło" [ref=f16e26]
+      - button "Zaloguj" [ref=f16e27] [cursor=pointer]
+  - contentinfo [ref=f16e28]:
+    - generic [ref=f16e29]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f16e30]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f16e31] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f16e32] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f16e33] [cursor=pointer]:
+      - /url: /api/docs

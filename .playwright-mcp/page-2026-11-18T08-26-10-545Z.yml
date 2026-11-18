@@ -1,0 +1,229 @@
+- generic [active] [ref=f11e1]:
+  - banner [ref=f11e2]:
+    - generic [ref=f11e3]:
+      - link "namssor" [ref=f11e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f11e8]:
+        - link "Produkty" [ref=f11e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f11e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f11e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f11e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f11e13] [cursor=pointer]:
+          - /url: /konto/adresy
+        - link "Panel admina" [ref=f11e14] [cursor=pointer]:
+          - /url: /admin
+      - generic [ref=f11e15]:
+        - generic [ref=f11e16]: Zalogowano jako admin (admin)
+        - button "Wyloguj" [ref=f11e18] [cursor=pointer]
+  - main [ref=f11e19]:
+    - heading "Produkty" [level=1] [ref=f11e20]
+    - paragraph [ref=f11e21]: "Dodano produkt: Przejscie P3 recznie 2026-11-18 09:27"
+    - generic [ref=f11e22]:
+      - generic [ref=f11e23]:
+        - heading "Dodaj produkt" [level=2] [ref=f11e24]
+        - paragraph [ref=f11e25]:
+          - generic [ref=f11e26]: Nazwa
+          - textbox "Nazwa" [ref=f11e27]
+        - paragraph [ref=f11e28]:
+          - generic [ref=f11e29]: Kategoria
+          - textbox "Kategoria" [ref=f11e30]
+        - paragraph [ref=f11e31]:
+          - generic [ref=f11e32]: Cena (zł)
+          - textbox "Cena (zł)" [ref=f11e33]: 9,99
+        - paragraph [ref=f11e34]:
+          - generic [ref=f11e35]: Stan
+          - textbox "Stan" [ref=f11e36]: "10"
+        - button "Dodaj produkt" [ref=f11e37] [cursor=pointer]
+      - generic [ref=f11e38]:
+        - heading "Import z pliku CSV" [level=2] [ref=f11e39]
+        - paragraph [ref=f11e40]:
+          - generic [ref=f11e41]: Plik CSV z produktami
+          - button "Plik CSV z produktami" [ref=f11e42]
+        - paragraph [ref=f11e43]:
+          - text: "Pierwszy wiersz:"
+          - code [ref=f11e44]: nazwa;kategoria;cena;stan
+          - text: ". Separator: średnik. Cena z przecinkiem, np. 12,99. Produkt o istniejącej nazwie zostanie zaktualizowany."
+        - button "Importuj" [ref=f11e45] [cursor=pointer]
+    - paragraph [ref=f11e46]: "Liczba produktów: 32"
+    - table [ref=f11e47]:
+      - rowgroup [ref=f11e48]:
+        - row [ref=f11e49]:
+          - columnheader "Nazwa" [ref=f11e50]
+          - columnheader "Kategoria" [ref=f11e51]
+          - columnheader "Cena" [ref=f11e52]
+          - columnheader "Stan" [ref=f11e53]
+      - rowgroup [ref=f11e54]:
+        - row [ref=f11e55]:
+          - cell "Balsam do ciała" [ref=f11e56]
+          - cell "Ciało" [ref=f11e57]
+          - cell "18,99 zł" [ref=f11e58]
+          - cell "70" [ref=f11e59]
+        - row [ref=f11e60]:
+          - cell "Dezodorant w sprayu" [ref=f11e61]
+          - cell "Ciało" [ref=f11e62]
+          - cell "13,99 zł" [ref=f11e63]
+          - cell "0" [ref=f11e64]
+        - row [ref=f11e65]:
+          - cell "Mydło w kostce" [ref=f11e66]
+          - cell "Ciało" [ref=f11e67]
+          - cell "4,99 zł" [ref=f11e68]
+          - cell "200" [ref=f11e69]
+        - row [ref=f11e70]:
+          - cell "Żel pod prysznic" [ref=f11e71]
+          - cell "Ciało" [ref=f11e72]
+          - cell "9,99 zł" [ref=f11e73]
+          - cell "160" [ref=f11e74]
+        - row [ref=f11e75]:
+          - cell "Płyn do mycia naczyń" [ref=f11e76]
+          - cell "Dom" [ref=f11e77]
+          - cell "6,99 zł" [ref=f11e78]
+          - cell "180" [ref=f11e79]
+        - row [ref=f11e80]:
+          - cell "Chusteczki nawilżane dla dzieci" [ref=f11e81]
+          - cell "Dziecko" [ref=f11e82]
+          - cell "7,99 zł" [ref=f11e83]
+          - cell "200" [ref=f11e84]
+        - row [ref=f11e85]:
+          - cell "Krem ochronny dla dzieci" [ref=f11e86]
+          - cell "Dziecko" [ref=f11e87]
+          - cell "14,99 zł" [ref=f11e88]
+          - cell "50" [ref=f11e89]
+        - row [ref=f11e90]:
+          - cell "Szampon dla dzieci" [ref=f11e91]
+          - cell "Dziecko" [ref=f11e92]
+          - cell "10,99 zł" [ref=f11e93]
+          - cell "64" [ref=f11e94]
+        - row [ref=f11e95]:
+          - cell "Nić dentystyczna" [ref=f11e96]
+          - cell "Higiena jamy ustnej" [ref=f11e97]
+          - cell "6,99 zł" [ref=f11e98]
+          - cell "50" [ref=f11e99]
+        - row [ref=f11e100]:
+          - cell "Pasta do zębów" [ref=f11e101]
+          - cell "Higiena jamy ustnej" [ref=f11e102]
+          - cell "8,99 zł" [ref=f11e103]
+          - cell "140" [ref=f11e104]
+        - row [ref=f11e105]:
+          - cell "Płyn do płukania jamy ustnej" [ref=f11e106]
+          - cell "Higiena jamy ustnej" [ref=f11e107]
+          - cell "16,99 zł" [ref=f11e108]
+          - cell "56" [ref=f11e109]
+        - row [ref=f11e110]:
+          - cell "Szczoteczka do zębów" [ref=f11e111]
+          - cell "Higiena jamy ustnej" [ref=f11e112]
+          - cell "7,99 zł" [ref=f11e113]
+          - cell "112" [ref=f11e114]
+        - row [ref=f11e115]:
+          - cell "Produkt testowy P3 2026-11-18T08:13:06.905Z" [ref=f11e116]
+          - cell "Testowe" [ref=f11e117]
+          - cell "12,50 zł" [ref=f11e118]
+          - cell "5" [ref=f11e119]
+        - row [ref=f11e120]:
+          - cell "Produkt testowy P3 2026-11-18T08:14:55.295Z" [ref=f11e121]
+          - cell "Testowe" [ref=f11e122]
+          - cell "12,50 zł" [ref=f11e123]
+          - cell "5" [ref=f11e124]
+        - row [ref=f11e125]:
+          - cell "Produkt testowy P3 2026-11-18T08:15:15.739Z" [ref=f11e126]
+          - cell "Testowe" [ref=f11e127]
+          - cell "12,50 zł" [ref=f11e128]
+          - cell "5" [ref=f11e129]
+        - row [ref=f11e130]:
+          - cell "Produkt testowy P3 2026-11-18T08:20:55.328Z" [ref=f11e131]
+          - cell "Testowe" [ref=f11e132]
+          - cell "12,50 zł" [ref=f11e133]
+          - cell "5" [ref=f11e134]
+        - row [ref=f11e135]:
+          - cell "Produkt testowy P3 2026-11-18T08:21:00.388Z" [ref=f11e136]
+          - cell "Testowe" [ref=f11e137]
+          - cell "12,50 zł" [ref=f11e138]
+          - cell "5" [ref=f11e139]
+        - row [ref=f11e140]:
+          - cell "Produkt testowy P3 2026-11-18T08:21:04.361Z" [ref=f11e141]
+          - cell "Testowe" [ref=f11e142]
+          - cell "12,50 zł" [ref=f11e143]
+          - cell "5" [ref=f11e144]
+        - row [ref=f11e145]:
+          - cell "Produkt testowy P3 2026-11-18T08:21:11.300Z" [ref=f11e146]
+          - cell "Testowe" [ref=f11e147]
+          - cell "12,50 zł" [ref=f11e148]
+          - cell "5" [ref=f11e149]
+        - row [ref=f11e150]:
+          - cell "Produkt testowy P3 2026-11-18T08:21:16.414Z" [ref=f11e151]
+          - cell "Testowe" [ref=f11e152]
+          - cell "12,50 zł" [ref=f11e153]
+          - cell "5" [ref=f11e154]
+        - row [ref=f11e155]:
+          - cell "Produkt testowy P3 2026-11-18T08:21:21.984Z" [ref=f11e156]
+          - cell "Testowe" [ref=f11e157]
+          - cell "12,50 zł" [ref=f11e158]
+          - cell "5" [ref=f11e159]
+        - row [ref=f11e160]:
+          - cell "Przejscie P3 recznie 2026-11-18 09:27" [ref=f11e161]
+          - cell "Testowe" [ref=f11e162]
+          - cell "12,50 zł" [ref=f11e163]
+          - cell "5" [ref=f11e164]
+        - row [ref=f11e165]:
+          - cell "Krem do twarzy na dzień" [ref=f11e166]
+          - cell "Twarz" [ref=f11e167]
+          - cell "32,99 zł" [ref=f11e168]
+          - cell "60" [ref=f11e169]
+        - row [ref=f11e170]:
+          - cell "Maseczka glinkowa" [ref=f11e171]
+          - cell "Twarz" [ref=f11e172]
+          - cell "8,99 zł" [ref=f11e173]
+          - cell "88" [ref=f11e174]
+        - row [ref=f11e175]:
+          - cell "Płyn micelarny" [ref=f11e176]
+          - cell "Twarz" [ref=f11e177]
+          - cell "15,99 zł" [ref=f11e178]
+          - cell "120" [ref=f11e179]
+        - row [ref=f11e180]:
+          - cell "Serum z witaminą C" [ref=f11e181]
+          - cell "Twarz" [ref=f11e182]
+          - cell "49,99 zł" [ref=f11e183]
+          - cell "0" [ref=f11e184]
+        - row [ref=f11e185]:
+          - cell "Lakier do włosów" [ref=f11e186]
+          - cell "Włosy" [ref=f11e187]
+          - cell "11,99 zł" [ref=f11e188]
+          - cell "50" [ref=f11e189]
+        - row [ref=f11e190]:
+          - cell "Maska do włosów z olejem arganowym" [ref=f11e191]
+          - cell "Włosy" [ref=f11e192]
+          - cell "24,99 zł" [ref=f11e193]
+          - cell "0" [ref=f11e194]
+        - row [ref=f11e195]:
+          - cell "Odżywka do włosów" [ref=f11e196]
+          - cell "Włosy" [ref=f11e197]
+          - cell "14,99 zł" [ref=f11e198]
+          - cell "72" [ref=f11e199]
+        - row [ref=f11e200]:
+          - cell "Szampon nawilżający" [ref=f11e201]
+          - cell "Włosy" [ref=f11e202]
+          - cell "12,99 zł" [ref=f11e203]
+          - cell "100" [ref=f11e204]
+        - row [ref=f11e205]:
+          - cell "Kalendarz adwentowy 2025" [ref=f11e206]
+          - cell "Święta" [ref=f11e207]
+          - cell "39,99 zł" [ref=f11e208]
+          - cell "7" [ref=f11e209]
+        - row [ref=f11e210]:
+          - cell "Kalendarz adwentowy 2026" [ref=f11e211]
+          - cell "Święta" [ref=f11e212]
+          - cell "39,99 zł" [ref=f11e213]
+          - cell "1930" [ref=f11e214]
+  - contentinfo [ref=f11e215]:
+    - generic [ref=f11e216]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f11e217]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f11e218] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f11e219] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f11e220] [cursor=pointer]:
+      - /url: /api/docs

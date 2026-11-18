@@ -1,0 +1,86 @@
+- generic [active] [ref=f12e1]:
+  - banner [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - link "namssor" [ref=f12e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f12e8]:
+        - link "Produkty" [ref=f12e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f12e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f12e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f12e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f12e13] [cursor=pointer]:
+          - /url: /konto/adresy
+        - link "Panel admina" [ref=f12e14] [cursor=pointer]:
+          - /url: /admin
+      - generic [ref=f12e15]:
+        - generic [ref=f12e16]: Zalogowano jako admin (admin)
+        - button "Wyloguj" [ref=f12e18] [cursor=pointer]
+  - main [ref=f12e19]:
+    - heading "Produkty" [level=1] [ref=f12e20]
+    - search [ref=f12e21]:
+      - generic [ref=f12e22]:
+        - text: Szukaj produktu
+        - searchbox "Szukaj produktu" [ref=f12e23]: Przejscie P3 recznie
+      - generic [ref=f12e24]:
+        - text: Kategoria
+        - combobox "Kategoria" [ref=f12e25]:
+          - option "Wszystkie" [selected]
+          - option "Ciało"
+          - option "Dom"
+          - option "Dziecko"
+          - option "Higiena jamy ustnej"
+          - option "Testowe"
+          - option "Twarz"
+          - option "Włosy"
+          - option "Święta"
+      - generic [ref=f12e26]:
+        - text: Sortuj
+        - combobox "Sortuj" [ref=f12e27]:
+          - option "Domyślnie" [selected]
+          - 'option "Cena: od najniższej"'
+          - 'option "Cena: od najwyższej"'
+          - 'option "Nazwa: A–Z"'
+      - button "Filtruj" [ref=f12e28] [cursor=pointer]
+    - paragraph [ref=f12e29]: "Liczba produktów: 1"
+    - table [ref=f12e30]:
+      - rowgroup [ref=f12e31]:
+        - row [ref=f12e32]:
+          - columnheader "Nazwa" [ref=f12e33]
+          - columnheader "Kategoria" [ref=f12e34]
+          - columnheader "Cena" [ref=f12e35]
+          - columnheader "Stan" [ref=f12e36]
+          - columnheader "Dostępność" [ref=f12e37]
+          - columnheader [ref=f12e38]
+      - rowgroup [ref=f12e39]:
+        - row [ref=f12e40]:
+          - cell "Przejscie P3 recznie 2026-11-18 09:27" [ref=f12e41]
+          - cell "Testowe" [ref=f12e42]
+          - cell "12,50 zł" [ref=f12e43]
+          - cell "5" [ref=f12e44]
+          - cell "Dostępny" [ref=f12e45]
+          - cell [ref=f12e46]:
+            - 'button "Dodaj do koszyka: Przejscie P3 recznie 2026-11-18 09:27" [ref=f12e48] [cursor=pointer]': Dodaj do koszyka
+    - region "Oferta na Czarny Piątek" [ref=f12e49]:
+      - heading "Oferta na Czarny Piątek" [level=2] [ref=f12e50]
+      - paragraph [ref=f12e51]: Czarny Piątek w Namssorze startuje 27.11.2026. Do startu promocji zostało 9 dni.
+      - article [ref=f12e53]:
+        - heading [level=3] [ref=f12e54]:
+          - link "Przejscie P3 recznie 2026-11-18 09:27" [ref=f12e55] [cursor=pointer]:
+            - /url: /produkt/32
+        - paragraph [ref=f12e56]: Testowe
+        - paragraph [ref=f12e57]: 12,50 zł
+        - paragraph [ref=f12e58]: Dostępny
+  - contentinfo [ref=f12e59]:
+    - generic [ref=f12e60]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f12e61]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f12e62] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f12e63] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f12e64] [cursor=pointer]:
+      - /url: /api/docs

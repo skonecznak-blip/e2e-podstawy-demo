@@ -1,0 +1,46 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "namssor" [ref=f1e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f1e8]:
+        - link "Produkty" [ref=f1e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f1e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f1e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f1e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f1e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f1e14]:
+        - generic [ref=f1e15]: Zalogowano jako user (user)
+        - button "Wyloguj" [ref=f1e17] [cursor=pointer]
+  - main [ref=f1e18]:
+    - heading "Koszyk" [level=1] [ref=f1e19]
+    - paragraph [ref=f1e20]: "Pozycji: 0, razem: 0,00 zł"
+    - paragraph [ref=f1e21]:
+      - text: Koszyk jest pusty.
+      - link "Wybierz produkty" [ref=f1e22] [cursor=pointer]:
+        - /url: /
+    - table [ref=f1e23]:
+      - rowgroup [ref=f1e24]:
+        - row [ref=f1e25]:
+          - columnheader "Produkt" [ref=f1e26]
+          - columnheader "Cena" [ref=f1e27]
+          - columnheader "Ilość" [ref=f1e28]
+          - columnheader "Wartość" [ref=f1e29]
+          - columnheader [ref=f1e30]
+      - rowgroup
+    - button "Złóż zamówienie (płatność przy odbiorze)" [disabled] [ref=f1e32]
+  - contentinfo [ref=f1e33]:
+    - generic [ref=f1e34]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f1e35]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f1e36] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f1e37] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f1e38] [cursor=pointer]:
+      - /url: /api/docs

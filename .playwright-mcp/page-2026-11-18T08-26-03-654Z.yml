@@ -1,0 +1,54 @@
+- generic [active] [ref=f9e1]:
+  - banner [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - link "namssor" [ref=f9e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f9e8]:
+        - link "Produkty" [ref=f9e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f9e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f9e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f9e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f9e13] [cursor=pointer]:
+          - /url: /konto/adresy
+        - link "Panel admina" [ref=f9e14] [cursor=pointer]:
+          - /url: /admin
+      - generic [ref=f9e15]:
+        - generic [ref=f9e16]: Zalogowano jako admin (admin)
+        - button "Wyloguj" [ref=f9e18] [cursor=pointer]
+  - main [ref=f9e19]:
+    - heading "Panel admina" [level=1] [ref=f9e20]
+    - generic [ref=f9e21]:
+      - generic [ref=f9e22]:
+        - heading [level=2] [ref=f9e23]:
+          - link "Zamówienia" [ref=f9e24] [cursor=pointer]:
+            - /url: /admin/zamowienia
+        - paragraph [ref=f9e25]: Lista, wyszukiwanie, anulowanie, eksport do CSV.
+      - generic [ref=f9e26]:
+        - heading [level=2] [ref=f9e27]:
+          - link "Produkty" [ref=f9e28] [cursor=pointer]:
+            - /url: /admin/produkty
+        - paragraph [ref=f9e29]: Dodawanie produktu i import z pliku CSV.
+      - generic [ref=f9e30]:
+        - heading [level=2] [ref=f9e31]:
+          - link "Ustawienia" [ref=f9e32] [cursor=pointer]:
+            - /url: /admin/ustawienia
+        - paragraph [ref=f9e33]: Tryb konserwacji sklepu.
+      - generic [ref=f9e34]:
+        - heading [level=2] [ref=f9e35]:
+          - link "Anulowanie z potwierdzeniem" [ref=f9e36] [cursor=pointer]:
+            - /url: /admin/zamowienia/potwierdzenie
+        - paragraph [ref=f9e37]: Zamówienia z oknem „Czy na pewno?”.
+  - contentinfo [ref=f9e38]:
+    - generic [ref=f9e39]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f9e40]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f9e41] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f9e42] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f9e43] [cursor=pointer]:
+      - /url: /api/docs
