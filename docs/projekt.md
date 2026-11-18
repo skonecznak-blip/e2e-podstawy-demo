@@ -16,7 +16,7 @@ Każdy test przechodzi review drugiej osoby z pary, zanim trafi do commita. Osob
 
 ## Scenariusze
 
-Wybrane: (np. P3, P5, P9, P11)
+Wybrane: P1, P2, P3, P5
 
 ### P1. Zakup z płatnością przy odbiorze (E2E)
 
