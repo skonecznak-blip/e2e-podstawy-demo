@@ -15,11 +15,26 @@ const domyslneHaslo = () => process.env.APP_PASSWORD || 'user123';
 // Inne konto: await zaloguj(page, 'biuro', 'biuro123');
 export async function zaloguj(page: Page, login = domyslnyLogin(), haslo = domyslneHaslo()) {
   await page.goto('/logowanie');
+  await zalogujNaOtwartejStronie(page, login, haslo);
+}
+
+// Wypełnia formularz na stronie logowania, która jest już otwarta.
+// Przydaje się, gdy aplikacja sama przekierowała na logowanie (np. z /koszyk)
+// i adres ma parametr next, którego page.goto('/logowanie') by nie zachował.
+// Wywołanie w teście: await zalogujNaOtwartejStronie(page);
+export async function zalogujNaOtwartejStronie(page: Page, login = domyslnyLogin(), haslo = domyslneHaslo()) {
   await page.getByLabel('Login').fill(login);
   await page.getByLabel('Hasło').fill(haslo);
   await page.getByRole('button', { name: 'Zaloguj' }).click();
   // Bez tej asercji test szedłby dalej także po nieudanym logowaniu.
   await expect(page.getByText(`Zalogowano jako ${login}`)).toBeVisible();
+}
+
+// Logowanie administratora. Konto ze zmiennych ADMIN_USER i ADMIN_PASSWORD,
+// a gdy ich nie ma, konto demo admin / admin123 (działa tylko lokalnie).
+// Wywołanie w teście: await zalogujAdmina(page);
+export async function zalogujAdmina(page: Page) {
+  await zaloguj(page, process.env.ADMIN_USER || 'admin', process.env.ADMIN_PASSWORD || 'admin123');
 }
 
 // Logowanie w testach API. Po nim `request` wysyła ciasteczko sesji w kolejnych żądaniach.
