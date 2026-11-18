@@ -1,0 +1,46 @@
+- generic [active] [ref=f10e1]:
+  - banner [ref=f10e2]:
+    - generic [ref=f10e3]:
+      - link "namssor" [ref=f10e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f10e8]:
+        - link "Produkty" [ref=f10e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f10e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f10e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f10e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f10e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f10e14]:
+        - generic [ref=f10e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f10e17] [cursor=pointer]
+  - main [ref=f10e18]:
+    - paragraph [ref=f10e19]:
+      - link "← Wszystkie produkty" [ref=f10e20] [cursor=pointer]:
+        - /url: /
+    - paragraph [ref=f10e21]: Czarny Piątek w Namssorze startuje 27.11.2026. Do startu promocji zostało 9 dni.
+    - article [ref=f10e22]:
+      - heading "Mydło w kostce" [level=1] [ref=f10e23]
+      - paragraph [ref=f10e24]: "Kategoria: Ciało"
+      - paragraph [ref=f10e25]: Mydło glicerynowe w kostce. Waga 100 g.
+      - paragraph [ref=f10e26]: 4,99 zł
+      - paragraph [ref=f10e27]: Dostępny (144 szt.)
+      - generic [ref=f10e28]:
+        - generic [ref=f10e29]:
+          - text: Ilość
+          - spinbutton "Ilość" [ref=f10e30]: "1"
+        - button "Dodaj do koszyka" [ref=f10e31] [cursor=pointer]
+  - contentinfo [ref=f10e32]:
+    - generic [ref=f10e33]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f10e34]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f10e35] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f10e36] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f10e37] [cursor=pointer]:
+      - /url: /api/docs
+    - generic [ref=f10e38]: "Wersja: rc"

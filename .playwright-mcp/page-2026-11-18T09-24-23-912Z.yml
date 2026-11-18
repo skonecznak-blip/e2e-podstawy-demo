@@ -1,0 +1,47 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - link "namssor" [ref=f3e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f3e8]:
+        - link "Produkty" [ref=f3e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f3e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f3e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f3e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f3e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f3e14]:
+        - generic [ref=f3e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f3e17] [cursor=pointer]
+  - main [ref=f3e18]:
+    - paragraph [ref=f3e19]:
+      - link "← Wszystkie produkty" [ref=f3e20] [cursor=pointer]:
+        - /url: /
+    - paragraph [ref=f3e21]: Czarny Piątek w Namssorze startuje 27.11.2026. Do startu promocji zostało 9 dni.
+    - article [ref=f3e22]:
+      - heading "Krem do twarzy na dzień" [level=1] [ref=f3e23]
+      - paragraph [ref=f3e24]: "Kategoria: Twarz"
+      - paragraph [ref=f3e25]: Lekki krem nawilżający z filtrem SPF 15. Pojemność 50 ml.
+      - paragraph [ref=f3e26]:
+        - text: 32,99 zł 26,39 zł
+        - generic [ref=f3e27]: "-20%"
+      - paragraph [ref=f3e28]: Dostępny (55 szt.)
+      - generic [ref=f3e29]:
+        - generic [ref=f3e30]:
+          - text: Ilość
+          - spinbutton "Ilość" [ref=f3e31]: "1"
+        - button "Dodaj do koszyka" [ref=f3e32] [cursor=pointer]
+  - contentinfo [ref=f3e33]:
+    - generic [ref=f3e34]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f3e35]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f3e36] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f3e37] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f3e38] [cursor=pointer]:
+      - /url: /api/docs

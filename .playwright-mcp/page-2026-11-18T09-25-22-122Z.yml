@@ -1,0 +1,55 @@
+- generic [active] [ref=f14e1]:
+  - banner [ref=f14e2]:
+    - generic [ref=f14e3]:
+      - link "namssor" [ref=f14e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f14e8]:
+        - link "Produkty" [ref=f14e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f14e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f14e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f14e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f14e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f14e14]:
+        - generic [ref=f14e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f14e17] [cursor=pointer]
+  - main [ref=f14e18]:
+    - paragraph [ref=f14e19]:
+      - link "← Moje zamówienia" [ref=f14e20] [cursor=pointer]:
+        - /url: /zamowienia
+    - heading "Zamówienie ZAM-1097" [level=1] [ref=f14e21]
+    - generic [ref=f14e22]:
+      - paragraph [ref=f14e23]:
+        - text: "Status:"
+        - strong [ref=f14e24]: Nowe
+      - paragraph [ref=f14e25]: "Data: 2026-11-18 10:25"
+      - table [ref=f14e26]:
+        - rowgroup [ref=f14e27]:
+          - row [ref=f14e28]:
+            - columnheader "Produkt" [ref=f14e29]
+            - columnheader "Cena" [ref=f14e30]
+            - columnheader "Ilość" [ref=f14e31]
+            - columnheader "Wartość" [ref=f14e32]
+        - rowgroup [ref=f14e33]:
+          - row [ref=f14e34]:
+            - cell "Mydło w kostce" [ref=f14e35]
+            - cell "4,99 zł" [ref=f14e36]
+            - cell "1" [ref=f14e37]
+            - cell "4,99 zł" [ref=f14e38]
+      - paragraph [ref=f14e39]: "Adres dostawy: ul. Testowa 1, 00-001 Warszawa"
+      - paragraph [ref=f14e40]: Zamówienie bez faktury na firmę.
+  - contentinfo [ref=f14e41]:
+    - generic [ref=f14e42]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f14e43]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f14e44] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f14e45] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f14e46] [cursor=pointer]:
+      - /url: /api/docs
+    - generic [ref=f14e47]: "Wersja: rc"

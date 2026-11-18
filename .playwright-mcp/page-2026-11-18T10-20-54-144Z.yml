@@ -1,0 +1,116 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "namssor" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f4e8]:
+        - link "Produkty" [ref=f4e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f4e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f4e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f4e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f4e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f4e14]:
+        - generic [ref=f4e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f4e17] [cursor=pointer]
+  - main [ref=f4e18]:
+    - heading "Zgłoszenie na tablicę wyników" [level=1] [ref=f4e19]
+    - status [ref=f4e20]: "Zaliczona niespodzianka #5: +1 punkt."
+    - heading "Zgłoś błąd" [level=2] [ref=f4e21]
+    - paragraph [ref=f4e22]:
+      - text: Wklejcie cały plik testu. Klaudiusz-sędzia sprawdzi, czy test przechodzi na wersji zwykłej i pada na
+      - code [ref=f4e23]: rc
+      - text: . Trener ma ostatnie słowo.
+    - generic [ref=f4e24]:
+      - paragraph [ref=f4e25]:
+        - generic [ref=f4e26]: Obszar
+        - combobox "Obszar" [ref=f4e27]:
+          - option "cena" [selected]
+          - option "kody"
+          - option "faktura"
+          - option "koszyk"
+          - option "sortowanie"
+          - option "walidacja"
+          - option "adresy"
+          - option "API"
+          - option "statusy"
+          - option "inne"
+      - paragraph [ref=f4e28]:
+        - generic [ref=f4e29]: Cały plik testu
+        - generic [ref=f4e30]: Do 20 000 znaków. Jedno zgłoszenie na 30 s.
+        - textbox "Cały plik testu" [ref=f4e31]
+      - button "Wyślij do Klaudiusza-sędziego" [ref=f4e32] [cursor=pointer]
+    - heading "Zgłoś flagę niespodzianki" [level=2] [ref=f4e33]
+    - generic [ref=f4e34]:
+      - generic [ref=f4e35]:
+        - text: Flaga
+        - textbox "Flaga" [ref=f4e36]:
+          - /placeholder: FLAGA-…
+      - button "Zgłoś flagę" [ref=f4e37] [cursor=pointer]
+    - heading "Wasze zgłoszenia" [level=2] [ref=f4e38]
+    - table [ref=f4e39]:
+      - rowgroup [ref=f4e40]:
+        - row [ref=f4e41]:
+          - columnheader "Godzina" [ref=f4e42]
+          - columnheader "Obszar" [ref=f4e43]
+          - columnheader "Stan" [ref=f4e44]
+          - columnheader "Wynik" [ref=f4e45]
+      - rowgroup [ref=f4e46]:
+        - row [ref=f4e47]:
+          - cell "10:48" [ref=f4e48]
+          - cell "sortowanie" [ref=f4e49]
+          - cell "już zaliczone wcześniej" [ref=f4e50]
+          - 'cell "Błąd #5" [ref=f4e51]'
+        - row [ref=f4e52]:
+          - cell "10:13" [ref=f4e53]
+          - cell "faktura" [ref=f4e54]
+          - cell "zaliczone" [ref=f4e55]
+          - 'cell "Błąd #3" [ref=f4e56]'
+        - row [ref=f4e57]:
+          - cell "10:13" [ref=f4e58]
+          - cell "koszyk" [ref=f4e59]
+          - cell "zaliczone" [ref=f4e60]
+          - 'cell "Błąd #9" [ref=f4e61]'
+        - row [ref=f4e62]:
+          - cell "10:12" [ref=f4e63]
+          - cell "sortowanie" [ref=f4e64]
+          - cell "zaliczone" [ref=f4e65]
+          - 'cell "Błąd #5" [ref=f4e66]'
+        - row [ref=f4e67]:
+          - cell "10:11" [ref=f4e68]
+          - cell "adresy" [ref=f4e69]
+          - cell "zaliczone" [ref=f4e70]
+          - 'cell "Błąd #7" [ref=f4e71]'
+        - row [ref=f4e72]:
+          - cell "10:10" [ref=f4e73]
+          - cell "walidacja" [ref=f4e74]
+          - cell "już zaliczone wcześniej" [ref=f4e75]
+          - 'cell "Błąd #9" [ref=f4e76]'
+        - row [ref=f4e77]:
+          - cell "10:09" [ref=f4e78]
+          - cell "API" [ref=f4e79]
+          - cell "zaliczone" [ref=f4e80]
+          - 'cell "Błąd #8" [ref=f4e81]'
+        - row [ref=f4e82]:
+          - cell "10:08" [ref=f4e83]
+          - cell "cena" [ref=f4e84]
+          - cell "zaliczone" [ref=f4e85]
+          - 'cell "Błąd #1" [ref=f4e86]'
+    - paragraph [ref=f4e87]:
+      - link "Tablica wyników" [ref=f4e88] [cursor=pointer]:
+        - /url: /tablica
+  - contentinfo [ref=f4e89]:
+    - generic [ref=f4e90]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f4e91]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f4e92] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f4e93] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f4e94] [cursor=pointer]:
+      - /url: /api/docs
+    - generic [ref=f4e95]: "Wersja: rc"

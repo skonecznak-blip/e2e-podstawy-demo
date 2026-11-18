@@ -1,0 +1,54 @@
+- generic [active] [ref=f8e1]:
+  - banner [ref=f8e2]:
+    - generic [ref=f8e3]:
+      - link "namssor" [ref=f8e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f8e8]:
+        - link "Produkty" [ref=f8e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f8e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f8e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f8e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f8e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f8e14]:
+        - generic [ref=f8e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f8e17] [cursor=pointer]
+  - main [ref=f8e18]:
+    - paragraph [ref=f8e19]:
+      - link "← Moje zamówienia" [ref=f8e20] [cursor=pointer]:
+        - /url: /zamowienia
+    - heading "Zamówienie ZAM-1100" [level=1] [ref=f8e21]
+    - generic [ref=f8e22]:
+      - paragraph [ref=f8e23]:
+        - text: "Status:"
+        - strong [ref=f8e24]: Nowe
+      - paragraph [ref=f8e25]: "Data: 2026-11-18 10:24"
+      - table [ref=f8e26]:
+        - rowgroup [ref=f8e27]:
+          - row [ref=f8e28]:
+            - columnheader "Produkt" [ref=f8e29]
+            - columnheader "Cena" [ref=f8e30]
+            - columnheader "Ilość" [ref=f8e31]
+            - columnheader "Wartość" [ref=f8e32]
+        - rowgroup [ref=f8e33]:
+          - row [ref=f8e34]:
+            - cell "Krem do twarzy na dzień" [ref=f8e35]
+            - cell "26,39 zł" [ref=f8e36]
+            - cell "1" [ref=f8e37]
+            - cell "26,39 zł" [ref=f8e38]
+      - paragraph [ref=f8e39]: "Adres dostawy: ul. Testowa 1, 00-001 Warszawa"
+      - paragraph [ref=f8e40]: Zamówienie bez faktury na firmę.
+  - contentinfo [ref=f8e41]:
+    - generic [ref=f8e42]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f8e43]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f8e44] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f8e45] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f8e46] [cursor=pointer]:
+      - /url: /api/docs

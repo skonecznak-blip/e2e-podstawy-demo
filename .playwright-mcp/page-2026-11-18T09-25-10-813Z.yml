@@ -1,0 +1,47 @@
+- generic [active] [ref=f11e1]:
+  - banner [ref=f11e2]:
+    - generic [ref=f11e3]:
+      - link "namssor" [ref=f11e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f11e8]:
+        - link "Produkty" [ref=f11e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f11e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f11e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f11e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f11e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f11e14]:
+        - generic [ref=f11e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f11e17] [cursor=pointer]
+  - main [ref=f11e18]:
+    - paragraph [ref=f11e19]:
+      - link "← Wszystkie produkty" [ref=f11e20] [cursor=pointer]:
+        - /url: /
+    - paragraph [ref=f11e21]: "Dodano do koszyka: Mydło w kostce"
+    - paragraph [ref=f11e22]: Czarny Piątek w Namssorze startuje 27.11.2026. Do startu promocji zostało 9 dni.
+    - article [ref=f11e23]:
+      - heading "Mydło w kostce" [level=1] [ref=f11e24]
+      - paragraph [ref=f11e25]: "Kategoria: Ciało"
+      - paragraph [ref=f11e26]: Mydło glicerynowe w kostce. Waga 100 g.
+      - paragraph [ref=f11e27]: 4,99 zł
+      - paragraph [ref=f11e28]: Dostępny (144 szt.)
+      - generic [ref=f11e29]:
+        - generic [ref=f11e30]:
+          - text: Ilość
+          - spinbutton "Ilość" [ref=f11e31]: "1"
+        - button "Dodaj do koszyka" [ref=f11e32] [cursor=pointer]
+  - contentinfo [ref=f11e33]:
+    - generic [ref=f11e34]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f11e35]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f11e36] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f11e37] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f11e38] [cursor=pointer]:
+      - /url: /api/docs
+    - generic [ref=f11e39]: "Wersja: rc"

@@ -1,0 +1,48 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "namssor" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f4e8]:
+        - link "Produkty" [ref=f4e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f4e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f4e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f4e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f4e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f4e14]:
+        - generic [ref=f4e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f4e17] [cursor=pointer]
+  - main [ref=f4e18]:
+    - paragraph [ref=f4e19]:
+      - link "← Wszystkie produkty" [ref=f4e20] [cursor=pointer]:
+        - /url: /
+    - paragraph [ref=f4e21]: "Dodano do koszyka: Krem do twarzy na dzień"
+    - paragraph [ref=f4e22]: Czarny Piątek w Namssorze startuje 27.11.2026. Do startu promocji zostało 9 dni.
+    - article [ref=f4e23]:
+      - heading "Krem do twarzy na dzień" [level=1] [ref=f4e24]
+      - paragraph [ref=f4e25]: "Kategoria: Twarz"
+      - paragraph [ref=f4e26]: Lekki krem nawilżający z filtrem SPF 15. Pojemność 50 ml.
+      - paragraph [ref=f4e27]:
+        - text: 32,99 zł 26,39 zł
+        - generic [ref=f4e28]: "-20%"
+      - paragraph [ref=f4e29]: Dostępny (55 szt.)
+      - generic [ref=f4e30]:
+        - generic [ref=f4e31]:
+          - text: Ilość
+          - spinbutton "Ilość" [ref=f4e32]: "1"
+        - button "Dodaj do koszyka" [ref=f4e33] [cursor=pointer]
+  - contentinfo [ref=f4e34]:
+    - generic [ref=f4e35]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f4e36]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f4e37] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f4e38] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f4e39] [cursor=pointer]:
+      - /url: /api/docs

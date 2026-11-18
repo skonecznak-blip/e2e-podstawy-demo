@@ -1,0 +1,60 @@
+- generic [active] [ref=f15e1]:
+  - banner [ref=f15e2]:
+    - generic [ref=f15e3]:
+      - link "namssor" [ref=f15e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f15e8]:
+        - link "Produkty" [ref=f15e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f15e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f15e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f15e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f15e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f15e14]:
+        - generic [ref=f15e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f15e17] [cursor=pointer]
+  - main [ref=f15e18]:
+    - paragraph [ref=f15e19]:
+      - link "← Moje zamówienia" [ref=f15e20] [cursor=pointer]:
+        - /url: /zamowienia
+    - heading "Zamówienie ZAM-1057" [level=1] [ref=f15e21]
+    - generic [ref=f15e22]:
+      - paragraph [ref=f15e23]:
+        - text: "Status:"
+        - strong [ref=f15e24]: Nowe
+      - paragraph [ref=f15e25]: "Data: 2026-11-18 10:13"
+      - table [ref=f15e26]:
+        - rowgroup [ref=f15e27]:
+          - row [ref=f15e28]:
+            - columnheader "Produkt" [ref=f15e29]
+            - columnheader "Cena" [ref=f15e30]
+            - columnheader "Ilość" [ref=f15e31]
+            - columnheader "Wartość" [ref=f15e32]
+        - rowgroup [ref=f15e33]:
+          - row [ref=f15e34]:
+            - cell "Kalendarz adwentowy 2026" [ref=f15e35]
+            - cell "39,99 zł" [ref=f15e36]
+            - cell "1" [ref=f15e37]
+            - cell "39,99 zł" [ref=f15e38]
+      - paragraph [ref=f15e39]: "Adres dostawy: ul. Testowa 1, 00-001 Warszawa"
+      - paragraph [ref=f15e40]:
+        - text: "Faktura na firmę:"
+        - strong [ref=f15e41]: Polowanie faktura
+        - text: ", NIP 1012023036"
+      - paragraph [ref=f15e42]:
+        - link "Pobierz fakturę" [ref=f15e43] [cursor=pointer]:
+          - /url: /zamowienia/ZAM-1057/faktura
+  - contentinfo [ref=f15e44]:
+    - generic [ref=f15e45]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f15e46]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f15e47] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f15e48] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f15e49] [cursor=pointer]:
+      - /url: /api/docs

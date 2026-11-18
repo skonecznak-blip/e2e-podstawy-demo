@@ -43,3 +43,9 @@ export async function zalogujPrzezApi(request: APIRequestContext, login = domysl
   const odpowiedz = await request.post('/api/login', { data: { login, password: haslo } });
   expect(odpowiedz.status(), `logowanie ${login} przez API`).toBe(200);
 }
+
+// Logowanie administratora w testach API (te same zmienne co zalogujAdmina).
+// Wywołanie w teście: await zalogujAdminaPrzezApi(request);
+export async function zalogujAdminaPrzezApi(request: APIRequestContext) {
+  await zalogujPrzezApi(request, process.env.ADMIN_USER || 'admin', process.env.ADMIN_PASSWORD || 'admin123');
+}

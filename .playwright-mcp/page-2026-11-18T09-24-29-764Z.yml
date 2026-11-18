@@ -1,0 +1,71 @@
+- generic [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - link "namssor" [ref=f5e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f5e8]:
+        - link "Produkty" [ref=f5e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f5e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f5e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f5e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f5e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f5e14]:
+        - generic [ref=f5e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f5e17] [cursor=pointer]
+  - main [ref=f5e18]:
+    - heading "Koszyk" [level=1] [ref=f5e19]
+    - paragraph [ref=f5e20]: "Pozycji: 1, razem: 26,39 zł"
+    - table [ref=f5e21]:
+      - rowgroup [ref=f5e22]:
+        - row [ref=f5e23]:
+          - columnheader "Produkt" [ref=f5e24]
+          - columnheader "Cena" [ref=f5e25]
+          - columnheader "Ilość" [ref=f5e26]
+          - columnheader "Wartość" [ref=f5e27]
+          - columnheader [ref=f5e28]
+      - rowgroup [ref=f5e29]:
+        - row [ref=f5e30]:
+          - cell "Krem do twarzy na dzień" [ref=f5e31]
+          - cell "32,99 zł 26,39 zł -20%" [ref=f5e32]:
+            - text: 32,99 zł 26,39 zł
+            - generic [ref=f5e33]: "-20%"
+          - cell "1" [ref=f5e34]
+          - cell "26,39 zł" [ref=f5e35]
+          - cell [ref=f5e36]:
+            - 'button "Usuń: Krem do twarzy na dzień" [ref=f5e38] [cursor=pointer]': Usuń
+    - generic [ref=f5e39]:
+      - generic [ref=f5e40]:
+        - text: Kod rabatowy
+        - textbox "Kod rabatowy" [ref=f5e41]
+      - button "Zastosuj kod" [ref=f5e42] [cursor=pointer]
+    - generic [ref=f5e43]:
+      - paragraph [ref=f5e44]:
+        - generic [ref=f5e45]:
+          - checkbox "Faktura na firmę" [checked] [active] [ref=f5e46]
+          - text: Faktura na firmę
+      - group "Dane do faktury" [ref=f5e55]:
+        - paragraph [ref=f5e57]:
+          - generic [ref=f5e58]: NIP
+          - generic [ref=f5e59]: 10 cyfr, np. 101-202-30-36
+          - textbox "NIP" [ref=f5e60]
+        - paragraph [ref=f5e61]:
+          - generic [ref=f5e62]: Nazwa firmy
+          - textbox "Nazwa firmy" [ref=f5e63]
+      - button "Złóż zamówienie (płatność przy odbiorze)" [ref=f5e47] [cursor=pointer]
+      - link "Zapłać kartą online" [ref=f5e48] [cursor=pointer]:
+        - /url: /koszyk/platnosc
+  - contentinfo [ref=f5e49]:
+    - generic [ref=f5e50]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f5e51]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f5e52] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f5e53] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f5e54] [cursor=pointer]:
+      - /url: /api/docs

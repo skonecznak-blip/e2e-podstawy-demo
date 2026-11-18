@@ -1,0 +1,55 @@
+- generic [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - link "namssor" [ref=f6e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f6e8]:
+        - link "Produkty" [ref=f6e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f6e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f6e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f6e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f6e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f6e14]:
+        - generic [ref=f6e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f6e17] [cursor=pointer]
+  - main [ref=f6e18]:
+    - heading "Płatność kartą" [level=1] [ref=f6e19]
+    - paragraph [ref=f6e20]:
+      - text: "Pozycji w koszyku: 1. Do zapłaty:"
+      - strong [ref=f6e21]: 26,39 zł
+    - paragraph [ref=f6e22]:
+      - text: Płatność obsługuje zewnętrzna bramka, osadzona poniżej w ramce. Zamawiając, akceptujesz
+      - link "regulamin sklepu" [ref=f6e23] [cursor=pointer]:
+        - /url: /regulamin
+      - text: .
+    - iframe [active] [ref=f6e24]:
+      - generic [active] [ref=f7e1]:
+        - heading "Bezpieczna płatność · PayDemo" [level=1] [ref=f7e2]
+        - alert [ref=f7e3]: Płatność odrzucona przez bank. Użyj innej karty.
+        - paragraph [ref=f7e4]:
+          - text: "Do zapłaty:"
+          - strong [ref=f7e5]: 26,39 zł
+        - generic [ref=f7e6]:
+          - paragraph [ref=f7e7]:
+            - generic [ref=f7e8]: Numer karty
+            - textbox "Numer karty" [ref=f7e9]
+          - button "Zapłać" [ref=f7e10] [cursor=pointer]
+    - paragraph [ref=f6e25]: "Karta testowa: 4111 1111 1111 1111 (płatność przyjęta), 4000 0000 0000 0002 (odrzucona)."
+    - paragraph [ref=f6e26]:
+      - link "Wróć do koszyka" [ref=f6e27] [cursor=pointer]:
+        - /url: /koszyk
+  - contentinfo [ref=f6e28]:
+    - generic [ref=f6e29]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f6e30]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f6e31] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f6e32] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f6e33] [cursor=pointer]:
+      - /url: /api/docs

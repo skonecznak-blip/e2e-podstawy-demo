@@ -1,0 +1,81 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - link "namssor" [ref=f6e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Menu główne" [ref=f6e8]:
+        - link "Produkty" [ref=f6e9] [cursor=pointer]:
+          - /url: /
+        - link "Koszyk" [ref=f6e10] [cursor=pointer]:
+          - /url: /koszyk
+        - link "Moje zamówienia" [ref=f6e11] [cursor=pointer]:
+          - /url: /zamowienia
+        - link "Adres dostawy" [ref=f6e12] [cursor=pointer]:
+          - /url: /konto/adres
+        - link "Moje adresy" [ref=f6e13] [cursor=pointer]:
+          - /url: /konto/adresy
+      - generic [ref=f6e14]:
+        - generic [ref=f6e15]: Zalogowano jako tester09 (user)
+        - button "Wyloguj" [ref=f6e17] [cursor=pointer]
+  - main [ref=f6e18]:
+    - heading "Zgłoszenie na tablicę wyników" [level=1] [ref=f6e19]
+    - alert [ref=f6e20]: Następne zgłoszenie testu za 4 s. Klaudiusz potrzebuje chwili.
+    - heading "Zgłoś błąd" [level=2] [ref=f6e21]
+    - paragraph [ref=f6e22]:
+      - text: Wklejcie cały plik testu. Klaudiusz-sędzia sprawdzi, czy test przechodzi na wersji zwykłej i pada na
+      - code [ref=f6e23]: rc
+      - text: . Trener ma ostatnie słowo.
+    - generic [ref=f6e24]:
+      - paragraph [ref=f6e25]:
+        - generic [ref=f6e26]: Obszar
+        - combobox "Obszar" [ref=f6e27]:
+          - option "cena"
+          - option "kody"
+          - option "faktura"
+          - option "koszyk"
+          - option "sortowanie"
+          - option "walidacja"
+          - option "adresy"
+          - option "API" [selected]
+          - option "statusy"
+          - option "inne"
+      - paragraph [ref=f6e28]:
+        - generic [ref=f6e29]: Cały plik testu
+        - generic [ref=f6e30]: Do 20 000 znaków. Jedno zgłoszenie na 30 s.
+        - textbox "Cały plik testu" [ref=f6e31]: "import { test, expect } from '@playwright/test'; import { zalogujPrzezApi } from '../pomocnicze/logowanie'; // Polowanie: API zwraca 200 dla zamówienia, którego nie ma. // Oczekiwana odpowiedź jak w scenariuszu P7: 404 i { \"error\": \"Nie ma takiego zamówienia\" }. test('GET /api/orders/ZAM-9999 zwraca 404 i błąd „Nie ma takiego zamówienia”', async ({ request }) => { await zalogujPrzezApi(request); const odpowiedz = await request.get('/api/orders/ZAM-9999'); expect(odpowiedz.status()).toBe(404); expect(await odpowiedz.json()).toEqual({ error: 'Nie ma takiego zamówienia' }); });"
+      - button "Wyślij do Klaudiusza-sędziego" [ref=f6e32] [cursor=pointer]
+    - heading "Zgłoś flagę niespodzianki" [level=2] [ref=f6e33]
+    - generic [ref=f6e34]:
+      - generic [ref=f6e35]:
+        - text: Flaga
+        - textbox "Flaga" [ref=f6e36]:
+          - /placeholder: FLAGA-…
+      - button "Zgłoś flagę" [ref=f6e37] [cursor=pointer]
+    - heading "Wasze zgłoszenia" [level=2] [ref=f6e38]
+    - table [ref=f6e39]:
+      - rowgroup [ref=f6e40]:
+        - row [ref=f6e41]:
+          - columnheader "Godzina" [ref=f6e42]
+          - columnheader "Obszar" [ref=f6e43]
+          - columnheader "Stan" [ref=f6e44]
+          - columnheader "Wynik" [ref=f6e45]
+      - rowgroup [ref=f6e46]:
+        - row [ref=f6e47]:
+          - cell "10:08" [ref=f6e48]
+          - cell "cena" [ref=f6e49]
+          - cell "zaliczone" [ref=f6e50]
+          - 'cell "Błąd #1" [ref=f6e51]'
+    - paragraph [ref=f6e52]:
+      - link "Tablica wyników" [ref=f6e53] [cursor=pointer]:
+        - /url: /tablica
+  - contentinfo [ref=f6e54]:
+    - generic [ref=f6e55]: Namssor to fikcyjna drogeria do ćwiczeń z automatyzacji testów. Dane są przykładowe.
+    - generic [ref=f6e56]:
+      - text: Grzegorz Brzezinka, Prosit AS,
+      - link "https://agentgreg.ai" [ref=f6e57] [cursor=pointer]:
+        - /url: https://agentgreg.ai
+    - link "Regulamin" [ref=f6e58] [cursor=pointer]:
+      - /url: /regulamin
+    - link "API" [ref=f6e59] [cursor=pointer]:
+      - /url: /api/docs
+    - generic [ref=f6e60]: "Wersja: rc"
