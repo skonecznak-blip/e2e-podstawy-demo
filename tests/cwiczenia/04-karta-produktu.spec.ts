@@ -27,9 +27,9 @@ test('cena promocyjna kremu jest taka sama na kafelku, karcie produktu i w koszy
   await expect(page.getByTestId('product-old-price')).toHaveText('32,99 zł');
   await expect(page.getByTestId('product-badge')).toHaveText('-20%');
 
-  // TODO 4: kliknij „Dodaj do koszyka” i sprawdź komunikat „Dodano do koszyka: Krem do twarzy na dzień”.
+  // TODO 4: kliknij „Dodaj do koszyka” i sprawdź komunikat „Produkt w koszyku: Krem do twarzy na dzień”.
   await page.getByRole('button', { name: 'Dodaj do koszyka' }).click();
-  await expect(page.getByText('Dodano do koszyka: Krem do twarzy na dzień')).toBeVisible();
+  await expect(page.getByText('Produkt w koszyku: Krem do twarzy na dzień')).toBeVisible();
 
   // TODO 5: przejdź do koszyka (link „Koszyk” w menu). Sprawdź, że wiersz kremu ma cenę 26,39 zł.
   await page.getByRole('link', { name: 'Koszyk' }).click();

@@ -40,7 +40,7 @@ test('zamówienie z „Faktura na firmę” ma dane firmy, a pobrana faktura num
   await expect(page.getByText('Faktura na firmę: Biuro Mikołaja, NIP 1012023036')).toBeVisible();
 
   const pobieranie = page.waitForEvent('download');
-  await page.getByRole('link', { name: 'Pobierz fakturę' }).click();
+  await page.getByRole('link', { name: 'Faktura (HTML)' }).click();
   const plik = await pobieranie;
   expect(plik.suggestedFilename()).toBe(`faktura-${numer}.html`);
   const tresc = await readFile(await plik.path(), 'utf8');

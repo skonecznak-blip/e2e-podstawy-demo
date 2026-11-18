@@ -37,7 +37,7 @@ test('pobrana faktura zamówienia na firmę ma NIP nabywcy 1012023036', async ({
   await expect(page.getByText('Faktura na firmę: Polowanie UI faktura, NIP 1012023036')).toBeVisible();
 
   const pobieranie = page.waitForEvent('download');
-  await page.getByRole('link', { name: 'Pobierz fakturę' }).click();
+  await page.getByRole('link', { name: 'Faktura (HTML)' }).click();
   const plik = await pobieranie;
   expect(plik.suggestedFilename()).toBe(`faktura-${numer}.html`);
   const tresc = await readFile(await plik.path(), 'utf8');

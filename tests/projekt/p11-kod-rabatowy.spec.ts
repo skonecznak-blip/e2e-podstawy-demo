@@ -22,7 +22,7 @@ test.afterEach(async ({ request }) => {
 
 async function wpiszKod(page: import('@playwright/test').Page, kod: string) {
   await page.getByLabel('Kod rabatowy').fill(kod);
-  await page.getByRole('button', { name: 'Zastosuj kod' }).click();
+  await page.getByRole('button', { name: 'Użyj kodu' }).click();
 }
 
 // CZARNY20 jest ważny do 30.11.2026 włącznie (app/promocje.mjs).
