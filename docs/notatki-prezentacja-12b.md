@@ -8,7 +8,7 @@ Asercje zależne od konkretnej daty, ilości albo ceny w `tests/projekt/`.
 
 | Test | Asercja | Kiedy padnie |
 |---|---|---|
-| P11 `p11-kod-rabatowy.spec.ts:28` | kod `CZARNY20` przyjęty, rabat `-1,00 zł` | **od 1.12.2026 sam z siebie**: kod jest ważny do 2026-11-30 (`app/promocje.mjs`), a test używa prawdziwej daty, bez nagłówka `X-Namssor-Teraz` |
+| P11 `p11-kod-rabatowy.spec.ts` | kod `CZARNY20` przyjęty, rabat `-1,00 zł` | **poprawione**: padłby od 1.12.2026 sam z siebie (kod ważny do 30.11). Teraz test bierze datę serwera z `GET /api/promocja` (pole `today`): do 30.11 sprawdza przyjęcie kodu, od 1.12 komunikat „Kod CZARNY20 wygasł 30.11.2026.” |
 | P13 `p13-odliczanie.spec.ts` | `days_left` 1 i 0, komunikaty dla 26.11 i 27.11 | gdy zmieni się data startu promocji albo treść komunikatu (daty w nagłówku są stałe, więc upływ czasu jej nie psuje) |
 | P10 `p10-faktura-na-firme.spec.ts:47`, P14 `p14-zamowienie-firmowe-api.spec.ts:22` | numer faktury `FV/2026/<numer>` | od 1.01.2027: rok w numerze faktury to rok złożenia zamówienia (`created_at`) |
 | P10, P14, P16 | produkt „Kalendarz adwentowy 2026” (id 21) | gdy w przyszłym roku kalendarz 2026 trafi do archiwum, tak jak teraz 2025 |
@@ -29,6 +29,6 @@ Asercje zależne od konkretnej daty, ilości albo ceny w `tests/projekt/`.
 
 ## Wnioski
 
-- Najgroźniejszy jest **P11**: padnie 1 grudnia bez żadnej zmiany wymagań. Poprawka: sprawdzać kod z nagłówkiem `X-Namssor-Teraz`, jeśli koszyk go obsługuje, albo zapisać w teście, że kod jest ważny do 30.11.
+- Najgroźniejszy był **P11**: padłby 1 grudnia bez żadnej zmiany wymagań. Koszyk nie obsługuje nagłówka `X-Namssor-Teraz`, więc test pyta serwer o dzisiejszą datę i uruchamia właściwy wariant; drugi jest pomijany (`skipped`).
 - Cena kalendarza (39,99 zł) jest wpisana w trzech testach (P10, P14, P16). Zmiana ceny to trzy poprawki.
 - Wzorzec z P1 i P3 (test sam ustala dane albo liczy względem stanu początkowego) jest odporny na zmiany.

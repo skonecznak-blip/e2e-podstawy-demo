@@ -25,7 +25,15 @@ async function wpiszKod(page: import('@playwright/test').Page, kod: string) {
   await page.getByRole('button', { name: 'Zastosuj kod' }).click();
 }
 
-test('kod CZARNY20 jest przyjęty i pod sumą jest linia z kwotą przed rabatem i rabatem -1,00 zł', async ({ page }) => {
+// CZARNY20 jest ważny do 30.11.2026 włącznie (app/promocje.mjs).
+// Czy kod jeszcze działa, decyduje zegar aplikacji, nie komputera z testami.
+// Dlatego „dzisiaj” bierzemy z serwera: pole today w GET /api/promocja (bez nagłówka X-Namssor-Teraz).
+const OSTATNI_DZIEN_CZARNY20 = '2026-11-30';
+
+test('kod CZARNY20 do 30.11.2026 jest przyjęty i pod sumą jest linia z kwotą przed rabatem i rabatem -1,00 zł', async ({ page, request }) => {
+  const { today } = await (await request.get('/api/promocja')).json();
+  test.skip(today > OSTATNI_DZIEN_CZARNY20, `CZARNY20 wygasł 30.11.2026, dziś na serwerze: ${today}`);
+
   await wpiszKod(page, 'CZARNY20');
 
   await expect(page.getByText('Kod CZARNY20 przyjęty: -20% na całe zamówienie.')).toBeVisible();
@@ -34,6 +42,16 @@ test('kod CZARNY20 jest przyjęty i pod sumą jest linia z kwotą przed rabatem 
   await expect(page.getByText('Przed rabatem:')).toContainText('rabat (CZARNY20):');
   await expect(page.getByTestId('cart-subtotal')).toHaveText('4,99 zł');
   await expect(page.getByTestId('cart-discount')).toHaveText('-1,00 zł');
+});
+
+test('kod CZARNY20 od 1.12.2026 daje komunikat „Kod CZARNY20 wygasł 30.11.2026.” i nie ma rabatu', async ({ page, request }) => {
+  const { today } = await (await request.get('/api/promocja')).json();
+  test.skip(today <= OSTATNI_DZIEN_CZARNY20, `CZARNY20 jest jeszcze ważny, dziś na serwerze: ${today}`);
+
+  await wpiszKod(page, 'CZARNY20');
+
+  await expect(page.getByText('Kod CZARNY20 wygasł 30.11.2026.')).toBeVisible();
+  await expect(page.getByText(/Przed rabatem:/)).toHaveCount(0);
 });
 
 test('kod NIEMA daje komunikat „Nie ma takiego kodu rabatowego: NIEMA” i nie ma rabatu', async ({ page }) => {
