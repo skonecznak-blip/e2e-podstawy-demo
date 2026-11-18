@@ -2,12 +2,14 @@
 
 ## Wyniki
 
-| Uruchomienie | passed | failed | skipped |
-|---|---|---|---|
-| Krok 1: `main`, wersja zwykła | 99 | 0 | 14 |
-| Krok 2: `main`, `APP_VERSION=hotfix` | 79 | 16 | 13 |
-| Krok 4: gałąź `hotfix-testy`, `APP_VERSION=hotfix` | 97 | 1 (P16) | 14 |
-| Krok 5: z powrotem na `main`, wersja zwykła | 99 | 0 | 14 |
+| Uruchomienie | passed | failed | skipped | did not run |
+|---|---|---|---|---|
+| Krok 1: `main`, wersja zwykła | 99 | 0 | 14 | 0 |
+| Krok 2: `main`, `APP_VERSION=hotfix` | 79 | 16 | 13 | 5 |
+| Krok 4: gałąź `hotfix-testy`, `APP_VERSION=hotfix` | 97 | 1 (P16) | 14 | 1 |
+| Krok 5: z powrotem na `main`, wersja zwykła | 99 | 0 | 14 | 0 |
+
+„Did not run”: pliki w trybie `serial` (np. P11, P16) po pierwszym błędzie nie uruchamiają kolejnych testów z tego pliku. W kroku 4 nie uruchomił się test P16 z ilością 1001. Uruchomiony osobno na hotfiksie przechodzi (`npx playwright test tests/projekt/p16 -g "1001"`), bo przy ilości 1 suma koszyka jest dobra.
 
 ## Diagnoza (krok 3)
 
