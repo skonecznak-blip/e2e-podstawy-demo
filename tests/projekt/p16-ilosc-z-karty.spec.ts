@@ -4,6 +4,9 @@ import { zaloguj, zalogujPrzezApi } from '../pomocnicze/logowanie';
 // P16. Ilość z karty produktu (E2E).
 // W koszyku jest też 1 „Mydło w kostce” (4,99 zł), żeby suma „razem” sprawdzała więcej niż jedną pozycję.
 
+// Oba testy używają koszyka tego samego konta, więc nie mogą biec równolegle.
+test.describe.configure({ mode: 'serial' });
+
 test.beforeEach(async ({ request }) => {
   await zalogujPrzezApi(request);
   await request.delete('/api/cart/discount');
@@ -31,4 +34,20 @@ test('24 szt. „Kalendarz adwentowy 2026” z karty produktu dają w koszyku wa
   await expect(wiersz.getByRole('cell', { name: '959,76 zł', exact: true })).toBeVisible();
   // Wartości: 959,76 zł (24 × 39,99 zł) + 4,99 zł (mydło) = 964,75 zł.
   await expect(page.getByText('Pozycji: 2, razem: 964,75 zł')).toBeVisible();
+});
+
+// Przypadek graniczny z karty produktu: dozwolona ilość to 1–1000.
+test('1001 szt. „Kalendarz adwentowy 2026” z karty produktu daje komunikat o zakresie ilości, a koszyk się nie zmienia', async ({ page }) => {
+  await zaloguj(page);
+  await page.goto('/produkt/21');
+  await expect(page.getByRole('heading', { name: 'Kalendarz adwentowy 2026' })).toBeVisible();
+
+  await page.getByLabel('Ilość').fill('1001');
+  await page.getByRole('button', { name: 'Dodaj do koszyka' }).click();
+  await expect(page.getByRole('alert')).toHaveText('Ilość musi być liczbą całkowitą od 1 do 1000.');
+
+  // W koszyku zostaje tylko mydło z beforeEach.
+  await page.goto('/koszyk');
+  await expect(page.getByRole('row').filter({ hasText: 'Kalendarz adwentowy 2026' })).toHaveCount(0);
+  await expect(page.getByText('Pozycji: 1, razem: 4,99 zł')).toBeVisible();
 });
