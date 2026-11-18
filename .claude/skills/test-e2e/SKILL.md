@@ -16,3 +16,4 @@ Wykonaj kroki po kolei. Nie pomijaj żadnego. Zasady pisania kodu są w `CLAUDE.
 7. Zmień na chwilę oczekiwaną wartość, uruchom test, pokaż, że padł, i przywróć wartość.
 8. Przejdź `docs/lista-kontrolna-review.md` punkt po punkcie i przy każdym napisz „tak” albo „nie” z numerem linii.
 9. Na końcu podaj polecenie do uruchomienia testu: `npx playwright test <ścieżka pliku>`.
+10. Korzystaj z helpera do logwania tests/pomocnicze/logowanie.ts, zamiast wpisywać login i hasło ręcznie.
